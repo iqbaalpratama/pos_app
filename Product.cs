@@ -153,7 +153,7 @@ namespace pos_wpf
             string outcome = "";
             try
             {
-                if (prodid.Text == "" || prodname.Text == "" || prodqty.Text == "" || prodprice.Text == "" || prodout.Text == "")
+                if (prodid.Text == "" || prodqty.Text == "" || prodout.Text == "")
                 {
                     MessageBox.Show("Missing Information");
                 }
@@ -180,7 +180,7 @@ namespace pos_wpf
                         }
                         Con.Close();
                         Con.Open();
-                        string query = "update Prod set ProdName = '" + prodname.Text + "', ProdQty = " + (int.Parse(prodqty.Text) + int.Parse(jumlah)) + ", ProdPriceSell = " + prodprice.Text + ", ProdCat = '" + prodcat.Text + "', ProdPriceBuy =" + (int.Parse(prodout.Text) + int.Parse(outcome)) + " where ProdId = " + prodid.Text + "";
+                        string query = "update Prod set ProdQty = " + (int.Parse(prodqty.Text) + int.Parse(jumlah)) + ", ProdPriceBuy =" + (int.Parse(prodout.Text) + int.Parse(outcome)) + " where ProdId = " + prodid.Text + "";
                         SqlCommand cmd = new SqlCommand(query, Con);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Product Edited Successfully");
