@@ -28,5 +28,12 @@ namespace pos_wpf
             pm.Show();
             this.Hide();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
     }
 }

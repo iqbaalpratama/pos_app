@@ -135,5 +135,19 @@ namespace pos_wpf
             pm.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Selling sell = new Selling();
+            sell.Show();
+            this.Hide();
+        }
     }
 }

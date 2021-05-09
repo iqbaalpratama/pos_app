@@ -55,6 +55,7 @@ namespace pos_wpf
             this.proddgv = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proddgv)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +66,7 @@ namespace pos_wpf
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(12, 28);
+            this.button1.Location = new System.Drawing.Point(12, 159);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 35);
             this.button1.TabIndex = 1;
@@ -92,7 +93,7 @@ namespace pos_wpf
             this.button3.Cursor = System.Windows.Forms.Cursors.Default;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 153);
+            this.button3.Location = new System.Drawing.Point(12, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 33);
             this.button3.TabIndex = 3;
@@ -359,7 +360,7 @@ namespace pos_wpf
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button10.ForeColor = System.Drawing.Color.Maroon;
-            this.button10.Location = new System.Drawing.Point(12, 202);
+            this.button10.Location = new System.Drawing.Point(-2, 201);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(110, 73);
@@ -368,11 +369,25 @@ namespace pos_wpf
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button11
+            // 
+            this.button11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(12, 289);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(84, 33);
+            this.button11.TabIndex = 14;
+            this.button11.Text = "Report";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 537);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -418,5 +433,6 @@ namespace pos_wpf
         private System.Windows.Forms.TextBox prodout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

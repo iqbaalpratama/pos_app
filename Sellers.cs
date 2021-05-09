@@ -123,5 +123,12 @@ namespace pos_wpf
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
     }
 }

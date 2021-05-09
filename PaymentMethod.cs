@@ -131,5 +131,12 @@ namespace pos_wpf
         {
             populate();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
     }
 }
