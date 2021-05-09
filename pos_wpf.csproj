@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Bunifu.UI.WinForms" Version="5.0.6" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -39,23 +39,24 @@ namespace pos_wpf
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.prodid = new System.Windows.Forms.TextBox();
+            this.prodname = new System.Windows.Forms.TextBox();
+            this.prodqty = new System.Windows.Forms.TextBox();
+            this.prodprice = new System.Windows.Forms.TextBox();
+            this.prodcat = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.prodout = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.proddgv = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proddgv)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -70,6 +71,7 @@ namespace pos_wpf
             this.button1.TabIndex = 1;
             this.button1.Text = "Sellers";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -116,7 +118,7 @@ namespace pos_wpf
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label6.Location = new System.Drawing.Point(269, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 25);
+            this.label6.Size = new System.Drawing.Size(245, 32);
             this.label6.TabIndex = 10;
             this.label6.Text = "Manage Products";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -128,7 +130,7 @@ namespace pos_wpf
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(13, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 19);
+            this.label1.Size = new System.Drawing.Size(30, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "ID";
             // 
@@ -139,7 +141,7 @@ namespace pos_wpf
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(13, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 19);
+            this.label2.Size = new System.Drawing.Size(68, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "NAME";
             // 
@@ -150,7 +152,7 @@ namespace pos_wpf
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(13, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 19);
+            this.label3.Size = new System.Drawing.Size(47, 23);
             this.label3.TabIndex = 13;
             this.label3.Text = "QTY";
             // 
@@ -161,7 +163,7 @@ namespace pos_wpf
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label4.Location = new System.Drawing.Point(13, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.Size = new System.Drawing.Size(65, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "PRICE";
             // 
@@ -172,58 +174,58 @@ namespace pos_wpf
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Location = new System.Drawing.Point(13, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 19);
+            this.label5.Size = new System.Drawing.Size(49, 23);
             this.label5.TabIndex = 15;
             this.label5.Text = "CAT";
             // 
-            // textBox1
+            // prodid
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(103, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 22);
-            this.textBox1.TabIndex = 16;
+            this.prodid.BackColor = System.Drawing.Color.White;
+            this.prodid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.prodid.Location = new System.Drawing.Point(103, 87);
+            this.prodid.Name = "prodid";
+            this.prodid.Size = new System.Drawing.Size(175, 26);
+            this.prodid.TabIndex = 16;
             // 
-            // textBox2
+            // prodname
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(103, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 22);
-            this.textBox2.TabIndex = 17;
+            this.prodname.BackColor = System.Drawing.Color.White;
+            this.prodname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.prodname.Location = new System.Drawing.Point(103, 123);
+            this.prodname.Name = "prodname";
+            this.prodname.Size = new System.Drawing.Size(175, 26);
+            this.prodname.TabIndex = 17;
             // 
-            // textBox3
+            // prodqty
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(103, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 22);
-            this.textBox3.TabIndex = 18;
+            this.prodqty.BackColor = System.Drawing.Color.White;
+            this.prodqty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.prodqty.Location = new System.Drawing.Point(103, 155);
+            this.prodqty.Name = "prodqty";
+            this.prodqty.Size = new System.Drawing.Size(175, 26);
+            this.prodqty.TabIndex = 18;
             // 
-            // textBox4
+            // prodprice
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(103, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 22);
-            this.textBox4.TabIndex = 19;
+            this.prodprice.BackColor = System.Drawing.Color.White;
+            this.prodprice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.prodprice.Location = new System.Drawing.Point(103, 190);
+            this.prodprice.Name = "prodprice";
+            this.prodprice.Size = new System.Drawing.Size(175, 26);
+            this.prodprice.TabIndex = 19;
             // 
-            // comboBox1
+            // prodcat
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.prodcat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.prodcat.FormattingEnabled = true;
+            this.prodcat.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.comboBox1.Location = new System.Drawing.Point(103, 226);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 20;
-            this.comboBox1.Text = "SELECT CATEGORY";
+            this.prodcat.Location = new System.Drawing.Point(103, 226);
+            this.prodcat.Name = "prodcat";
+            this.prodcat.Size = new System.Drawing.Size(175, 26);
+            this.prodcat.TabIndex = 20;
+            this.prodcat.Text = "SELECT CATEGORY";
             // 
             // comboBox2
             // 
@@ -234,27 +236,27 @@ namespace pos_wpf
             "SELLER"});
             this.comboBox2.Location = new System.Drawing.Point(417, 85);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 24);
+            this.comboBox2.Size = new System.Drawing.Size(131, 26);
             this.comboBox2.TabIndex = 22;
             this.comboBox2.Text = "SELECT CATEGORY";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.prodout);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.proddgv);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.prodcat);
+            this.panel1.Controls.Add(this.prodprice);
+            this.panel1.Controls.Add(this.prodqty);
+            this.panel1.Controls.Add(this.prodname);
+            this.panel1.Controls.Add(this.prodid);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -266,55 +268,25 @@ namespace pos_wpf
             this.panel1.Size = new System.Drawing.Size(734, 513);
             this.panel1.TabIndex = 0;
             // 
-            // button5
+            // prodout
             // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(578, 86);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Refresh";
-            this.button5.UseVisualStyleBackColor = true;
+            this.prodout.BackColor = System.Drawing.Color.White;
+            this.prodout.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.prodout.Location = new System.Drawing.Point(104, 277);
+            this.prodout.Name = "prodout";
+            this.prodout.Size = new System.Drawing.Size(175, 26);
+            this.prodout.TabIndex = 29;
             // 
-            // dataGridView1
+            // label7
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(294, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(427, 369);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(70, 310);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(46, 23);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "EDIT";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(13, 310);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(51, 23);
-            this.button7.TabIndex = 25;
-            this.button7.Text = "ADD";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(122, 310);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 26;
-            this.button8.Text = "DELETE";
-            this.button8.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label7.Location = new System.Drawing.Point(13, 277);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 23);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "OUTCOME";
             // 
             // button9
             // 
@@ -326,31 +298,81 @@ namespace pos_wpf
             this.button9.Text = "RESTOCK";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // button8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label7.Location = new System.Drawing.Point(13, 277);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 19);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "OUTCOME";
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.Location = new System.Drawing.Point(122, 310);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 26;
+            this.button8.Text = "DELETE";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // textBox5
+            // button7
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(104, 277);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(175, 22);
-            this.textBox5.TabIndex = 29;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.Location = new System.Drawing.Point(13, 310);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(51, 23);
+            this.button7.TabIndex = 25;
+            this.button7.Text = "ADD";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Location = new System.Drawing.Point(70, 310);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(46, 23);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "EDIT";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // proddgv
+            // 
+            this.proddgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.proddgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.proddgv.Location = new System.Drawing.Point(294, 123);
+            this.proddgv.Name = "proddgv";
+            this.proddgv.RowHeadersWidth = 51;
+            this.proddgv.RowTemplate.Height = 25;
+            this.proddgv.Size = new System.Drawing.Size(427, 369);
+            this.proddgv.TabIndex = 5;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(578, 86);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Refresh";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.Maroon;
+            this.button10.Location = new System.Drawing.Point(12, 202);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(110, 73);
+            this.button10.TabIndex = 13;
+            this.button10.Text = "Payment Method";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 537);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -360,9 +382,10 @@ namespace pos_wpf
             this.ForeColor = System.Drawing.Color.Maroon;
             this.Name = "Product";
             this.Text = "Product";
+            this.Load += new System.EventHandler(this.Product_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proddgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,20 +401,21 @@ namespace pos_wpf
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox prodid;
+        private System.Windows.Forms.TextBox prodname;
+        private System.Windows.Forms.TextBox prodqty;
+        private System.Windows.Forms.TextBox prodprice;
+        private System.Windows.Forms.ComboBox prodcat;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView proddgv;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox prodout;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button10;
     }
 }
