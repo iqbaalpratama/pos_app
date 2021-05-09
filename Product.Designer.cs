@@ -55,6 +55,7 @@ namespace pos_wpf
             this.proddgv = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proddgv)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +66,7 @@ namespace pos_wpf
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(12, 28);
+            this.button1.Location = new System.Drawing.Point(12, 159);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 35);
             this.button1.TabIndex = 1;
@@ -92,7 +93,7 @@ namespace pos_wpf
             this.button3.Cursor = System.Windows.Forms.Cursors.Default;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 153);
+            this.button3.Location = new System.Drawing.Point(12, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 33);
             this.button3.TabIndex = 3;
@@ -118,7 +119,7 @@ namespace pos_wpf
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label6.Location = new System.Drawing.Point(269, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(245, 32);
+            this.label6.Size = new System.Drawing.Size(192, 25);
             this.label6.TabIndex = 10;
             this.label6.Text = "Manage Products";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -130,7 +131,7 @@ namespace pos_wpf
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(13, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 23);
+            this.label1.Size = new System.Drawing.Size(24, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "ID";
             // 
@@ -141,7 +142,7 @@ namespace pos_wpf
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(13, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 23);
+            this.label2.Size = new System.Drawing.Size(55, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "NAME";
             // 
@@ -152,7 +153,7 @@ namespace pos_wpf
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(13, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 23);
+            this.label3.Size = new System.Drawing.Size(39, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "QTY";
             // 
@@ -163,7 +164,7 @@ namespace pos_wpf
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label4.Location = new System.Drawing.Point(13, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 23);
+            this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 14;
             this.label4.Text = "PRICE";
             // 
@@ -174,7 +175,7 @@ namespace pos_wpf
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Location = new System.Drawing.Point(13, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 23);
+            this.label5.Size = new System.Drawing.Size(40, 19);
             this.label5.TabIndex = 15;
             this.label5.Text = "CAT";
             // 
@@ -184,7 +185,7 @@ namespace pos_wpf
             this.prodid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.prodid.Location = new System.Drawing.Point(103, 87);
             this.prodid.Name = "prodid";
-            this.prodid.Size = new System.Drawing.Size(175, 26);
+            this.prodid.Size = new System.Drawing.Size(175, 22);
             this.prodid.TabIndex = 16;
             // 
             // prodname
@@ -193,7 +194,7 @@ namespace pos_wpf
             this.prodname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.prodname.Location = new System.Drawing.Point(103, 123);
             this.prodname.Name = "prodname";
-            this.prodname.Size = new System.Drawing.Size(175, 26);
+            this.prodname.Size = new System.Drawing.Size(175, 22);
             this.prodname.TabIndex = 17;
             // 
             // prodqty
@@ -202,7 +203,7 @@ namespace pos_wpf
             this.prodqty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.prodqty.Location = new System.Drawing.Point(103, 155);
             this.prodqty.Name = "prodqty";
-            this.prodqty.Size = new System.Drawing.Size(175, 26);
+            this.prodqty.Size = new System.Drawing.Size(175, 22);
             this.prodqty.TabIndex = 18;
             // 
             // prodprice
@@ -211,7 +212,7 @@ namespace pos_wpf
             this.prodprice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.prodprice.Location = new System.Drawing.Point(103, 190);
             this.prodprice.Name = "prodprice";
-            this.prodprice.Size = new System.Drawing.Size(175, 26);
+            this.prodprice.Size = new System.Drawing.Size(175, 22);
             this.prodprice.TabIndex = 19;
             // 
             // prodcat
@@ -223,7 +224,7 @@ namespace pos_wpf
             "SELLER"});
             this.prodcat.Location = new System.Drawing.Point(103, 226);
             this.prodcat.Name = "prodcat";
-            this.prodcat.Size = new System.Drawing.Size(175, 26);
+            this.prodcat.Size = new System.Drawing.Size(175, 24);
             this.prodcat.TabIndex = 20;
             this.prodcat.Text = "SELECT CATEGORY";
             // 
@@ -236,7 +237,7 @@ namespace pos_wpf
             "SELLER"});
             this.comboBox2.Location = new System.Drawing.Point(417, 85);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 26);
+            this.comboBox2.Size = new System.Drawing.Size(131, 24);
             this.comboBox2.TabIndex = 22;
             this.comboBox2.Text = "SELECT CATEGORY";
             // 
@@ -274,7 +275,7 @@ namespace pos_wpf
             this.prodout.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.prodout.Location = new System.Drawing.Point(104, 277);
             this.prodout.Name = "prodout";
-            this.prodout.Size = new System.Drawing.Size(175, 26);
+            this.prodout.Size = new System.Drawing.Size(175, 22);
             this.prodout.TabIndex = 29;
             // 
             // label7
@@ -284,7 +285,7 @@ namespace pos_wpf
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Location = new System.Drawing.Point(13, 277);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 23);
+            this.label7.Size = new System.Drawing.Size(86, 19);
             this.label7.TabIndex = 28;
             this.label7.Text = "OUTCOME";
             // 
@@ -297,6 +298,7 @@ namespace pos_wpf
             this.button9.TabIndex = 27;
             this.button9.Text = "RESTOCK";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -358,7 +360,7 @@ namespace pos_wpf
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button10.ForeColor = System.Drawing.Color.Maroon;
-            this.button10.Location = new System.Drawing.Point(12, 202);
+            this.button10.Location = new System.Drawing.Point(-2, 201);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(110, 73);
@@ -367,11 +369,25 @@ namespace pos_wpf
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button11
+            // 
+            this.button11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(12, 289);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(84, 33);
+            this.button11.TabIndex = 14;
+            this.button11.Text = "Report";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 537);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -417,5 +433,6 @@ namespace pos_wpf
         private System.Windows.Forms.TextBox prodout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

@@ -35,7 +35,7 @@ namespace pos_wpf
             this.Hide();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Salim\Documents\posdb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\pos.mdf;Integrated Security=True;Connect Timeout=30");
         private void populate()
         {
             Con.Open();
@@ -122,6 +122,13 @@ namespace pos_wpf
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
         }
     }
 }

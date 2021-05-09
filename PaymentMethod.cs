@@ -44,7 +44,7 @@ namespace pos_wpf
             this.Hide();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Salim\Documents\posdb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\pos.mdf;Integrated Security=True;Connect Timeout=30");
         private void populate()
         {
             Con.Open();
@@ -130,6 +130,13 @@ namespace pos_wpf
         private void PaymentMethod_Load(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace pos_wpf
             InitializeComponent();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Salim\Documents\posdb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\pos.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -60,7 +60,7 @@ namespace pos_wpf
             try
             {
                 Con.Open();
-                string query = "insert into Prod values(" + prodid.Text + ",'" + prodname.Text + "'," + prodqty.Text + ",'"+ prodcat.Text + "',"+int.Parse(prodout.Text)/int.Parse(prodqty.Text)+ ","+ prodprice.Text+",0)";
+                string query = "insert into Prod values(" + prodid.Text + ",'" + prodname.Text + "'," + prodqty.Text + ",'"+ prodcat.Text + "',"+prodout.Text+ ","+ prodprice.Text+")";
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product Added Successfully");
@@ -111,7 +111,7 @@ namespace pos_wpf
                 else
                 {
                     Con.Open();
-                    string query = "update Prod set ProdName = '" + prodname.Text + "', ProdQty = " + prodqty.Text + ", ProdPriceSell = " + prodprice.Text + ", ProdCat = '"+ prodcat.Text +"', ProdPriceBuy =" + int.Parse(prodout.Text) / int.Parse(prodqty.Text) + " where ProdId = " + prodid.Text + "";
+                    string query = "update Prod set ProdName = '" + prodname.Text + "', ProdQty = " + prodqty.Text + ", ProdPriceSell = " + prodprice.Text + ", ProdCat = '"+ prodcat.Text +"', ProdPriceBuy =" + prodout.Text + " where ProdId = " + prodid.Text + "";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product Edited Successfully");
@@ -144,6 +144,61 @@ namespace pos_wpf
         {
             PaymentMethod pm = new PaymentMethod();
             pm.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string jumlah = "";
+            string outcome = "";
+            try
+            {
+                if (prodid.Text == "" || prodqty.Text == "" || prodout.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    Con.Open();
+                    if (prodid.Text != "")
+                    {
+                        string queryselect = "select * from Prod WHERE ProdId = " + prodid.Text + "";
+                        SqlCommand cmd1 = new SqlCommand(queryselect, Con);
+                        SqlDataReader hasil = cmd1.ExecuteReader();
+                        {
+                                if (!hasil.HasRows)
+                                {
+                                    string msg  = "No Product with that ID";
+                                    MessageBox.Show(msg);
+                                }
+                                else
+                                {
+                                    hasil.Read();
+                                    jumlah = hasil["ProdQty"].ToString();
+                                    outcome = hasil["ProdPriceBuy"].ToString();
+                                }
+                        }
+                        Con.Close();
+                        Con.Open();
+                        string query = "update Prod set ProdQty = " + (int.Parse(prodqty.Text) + int.Parse(jumlah)) + ", ProdPriceBuy =" + (int.Parse(prodout.Text) + int.Parse(outcome)) + " where ProdId = " + prodid.Text + "";
+                        SqlCommand cmd = new SqlCommand(query, Con);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Product Edited Successfully");
+                        Con.Close();
+                        populate();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
             this.Hide();
         }
     }
