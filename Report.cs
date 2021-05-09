@@ -14,39 +14,19 @@ namespace pos_wpf
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\pos.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Salim\Documents\posdb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
-        private void fillcombo()
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("Select PaymentName from Payment", Con);
-            SqlDataReader rdr;
-            rdr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("PaymentName", typeof(string));
-            dt.Load(rdr);
-            comboBox2.ValueMember = "PaymentName";
-            comboBox2.DataSource = dt;
-
-            Con.Close();
-        }
-        public DataTable GetResultsTable()
-        {
-            
-            DataTable table = new DataTable();
-            table.Columns.Add("Seller".ToString());
-            table.Columns.Add("Transactions".ToString());
-            return table;
-        }
+        
+        
 
         private void populateSellerReport()
         {
             Con.Open();
-            string query = "select BillSeller as 'Seller Name' , count(BillSeller) as Total from Bill";
+            string query = "select BillSeller as 'Seller Name' , count(BillSeller) as Total from Bill group by BillSeller order by Total desc";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -58,7 +38,7 @@ namespace pos_wpf
         private void populateSellsList()
         {
             Con.Open();
-            string query = "select * from Bill";
+            string query = "select BillPayment as 'Payment Method', count(BillPayment) as Total from Bill group by BillPayment order by Total desc";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -70,7 +50,7 @@ namespace pos_wpf
         private void populateMostBuyingProducts()
         {
             Con.Open();
-            string query = "select ProdName as 'Product Name', ProdJual as 'Total' from Prod";
+            string query = "select ProdName as 'Product Name', ProdSold as 'Total' from Prod order by Total desc";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -87,22 +67,56 @@ namespace pos_wpf
 
         private void Report_Load(object sender, EventArgs e)
         {
-            fillcombo();
             populateSellsList();
             populateSellerReport();
             populateMostBuyingProducts();
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sellers sel = new Sellers();
+            sel.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Category cat = new Category();
+            cat.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Product prod = new Product();
+            prod.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PaymentMethod pm = new PaymentMethod();
+            pm.Show();
+            this.Hide();
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string query = "select * from Bill where BillPayment = "+ comboBox2.Text;
-            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-            var ds = new DataSet();
-            sda.Fill(ds);
-            dataGridView3.DataSource = ds.Tables[0];
-            Con.Close();
+            Selling sell = new Selling();
+            sell.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            log.Show();
+            this.Hide();
         }
     }
 }

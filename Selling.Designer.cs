@@ -40,7 +40,7 @@ namespace pos_wpf
             this.selproddgv = new System.Windows.Forms.DataGridView();
             this.billdgv = new System.Windows.Forms.DataGridView();
             this.orderdgv = new System.Windows.Forms.DataGridView();
-            this.selcat = new System.Windows.Forms.ComboBox();
+            this.selprodcat = new System.Windows.Forms.ComboBox();
             this.billqty = new System.Windows.Forms.TextBox();
             this.billprice = new System.Windows.Forms.TextBox();
             this.billprod = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@ namespace pos_wpf
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selproddgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billdgv)).BeginInit();
@@ -65,9 +65,10 @@ namespace pos_wpf
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(91, 240);
+            this.button7.Location = new System.Drawing.Point(135, 451);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(149, 23);
+            this.button7.Size = new System.Drawing.Size(170, 31);
             this.button7.TabIndex = 25;
             this.button7.Text = "ADD PRODUCT";
             this.button7.UseVisualStyleBackColor = true;
@@ -76,10 +77,10 @@ namespace pos_wpf
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(467, 613);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Location = new System.Drawing.Point(658, 856);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(53, 31);
+            this.button6.Size = new System.Drawing.Size(61, 41);
             this.button6.TabIndex = 24;
             this.button6.Text = "ADD";
             this.button6.UseVisualStyleBackColor = true;
@@ -88,9 +89,10 @@ namespace pos_wpf
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(203, 290);
+            this.button5.Location = new System.Drawing.Point(257, 508);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(86, 31);
             this.button5.TabIndex = 23;
             this.button5.Text = "Refresh";
             this.button5.UseVisualStyleBackColor = true;
@@ -109,7 +111,7 @@ namespace pos_wpf
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.orderdgv);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.selcat);
+            this.panel1.Controls.Add(this.selprodcat);
             this.panel1.Controls.Add(this.billqty);
             this.panel1.Controls.Add(this.billprice);
             this.panel1.Controls.Add(this.billprod);
@@ -119,9 +121,10 @@ namespace pos_wpf
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(129, 12);
+            this.panel1.Location = new System.Drawing.Point(147, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 513);
+            this.panel1.Size = new System.Drawing.Size(1063, 920);
             this.panel1.TabIndex = 5;
             // 
             // selpay
@@ -131,32 +134,32 @@ namespace pos_wpf
             this.selpay.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.comboBox1.Location = new System.Drawing.Point(622, 296);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 26);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.Text = "SELECT PAYMENT METHOD";
+            this.selpay.Location = new System.Drawing.Point(711, 395);
+            this.selpay.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.selpay.Name = "selpay";
+            this.selpay.Size = new System.Drawing.Size(230, 26);
+            this.selpay.TabIndex = 33;
+            this.selpay.Text = "SELECT PAYMENT METHOD";
             // 
             // amountidr
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(427, 296);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 23);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "IDR";
+            this.amountidr.AutoSize = true;
+            this.amountidr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.amountidr.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.amountidr.Location = new System.Drawing.Point(553, 395);
+            this.amountidr.Name = "amountidr";
+            this.amountidr.Size = new System.Drawing.Size(42, 23);
+            this.amountidr.TabIndex = 32;
+            this.amountidr.Text = "IDR";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label7.Location = new System.Drawing.Point(297, 222);
+            this.label7.Location = new System.Drawing.Point(438, 394);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 19);
+            this.label7.Size = new System.Drawing.Size(87, 23);
             this.label7.TabIndex = 31;
             this.label7.Text = "Amount";
             // 
@@ -165,110 +168,110 @@ namespace pos_wpf
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(478, 255);
+            this.label5.Location = new System.Drawing.Point(635, 478);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 21);
+            this.label5.Size = new System.Drawing.Size(84, 23);
             this.label5.TabIndex = 30;
             this.label5.Text = "Sells List";
             // 
             // selproddgv
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(27, 425);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(315, 229);
-            this.dataGridView3.TabIndex = 29;
+            this.selproddgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.selproddgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.selproddgv.Location = new System.Drawing.Point(31, 567);
+            this.selproddgv.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.selproddgv.Name = "selproddgv";
+            this.selproddgv.RowHeadersWidth = 51;
+            this.selproddgv.RowTemplate.Height = 25;
+            this.selproddgv.Size = new System.Drawing.Size(360, 305);
+            this.selproddgv.TabIndex = 29;
             // 
             // billdgv
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(383, 387);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(426, 199);
-            this.dataGridView2.TabIndex = 28;
+            this.billdgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.billdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.billdgv.Location = new System.Drawing.Point(438, 516);
+            this.billdgv.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.billdgv.Name = "billdgv";
+            this.billdgv.RowHeadersWidth = 51;
+            this.billdgv.RowTemplate.Height = 25;
+            this.billdgv.Size = new System.Drawing.Size(546, 302);
+            this.billdgv.TabIndex = 28;
             // 
             // orderdgv
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(383, 100);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(426, 179);
-            this.dataGridView1.TabIndex = 5;
+            this.orderdgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.orderdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderdgv.Location = new System.Drawing.Point(429, 104);
+            this.orderdgv.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.orderdgv.Name = "orderdgv";
+            this.orderdgv.RowHeadersWidth = 51;
+            this.orderdgv.RowTemplate.Height = 25;
+            this.orderdgv.Size = new System.Drawing.Size(555, 268);
+            this.orderdgv.TabIndex = 5;
             // 
-            // selcat
+            // selprodcat
             // 
-            this.selcat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.selcat.FormattingEnabled = true;
-            this.selcat.Items.AddRange(new object[] {
+            this.selprodcat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.selprodcat.FormattingEnabled = true;
+            this.selprodcat.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.comboBox2.Location = new System.Drawing.Point(51, 385);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(149, 26);
-            this.comboBox2.TabIndex = 22;
-            this.comboBox2.Text = "SELECT CATEGORY";
+            this.selprodcat.Location = new System.Drawing.Point(58, 513);
+            this.selprodcat.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.selprodcat.Name = "selprodcat";
+            this.selprodcat.Size = new System.Drawing.Size(170, 26);
+            this.selprodcat.TabIndex = 22;
+            this.selprodcat.Text = "SELECT CATEGORY";
             // 
             // billqty
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(118, 253);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 26);
-            this.textBox4.TabIndex = 19;
+            this.billqty.BackColor = System.Drawing.Color.White;
+            this.billqty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billqty.Location = new System.Drawing.Point(135, 297);
+            this.billqty.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.billqty.Name = "billqty";
+            this.billqty.Size = new System.Drawing.Size(227, 26);
+            this.billqty.TabIndex = 19;
             // 
             // billprice
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(118, 207);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 26);
-            this.textBox3.TabIndex = 18;
+            this.billprice.BackColor = System.Drawing.Color.White;
+            this.billprice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billprice.Location = new System.Drawing.Point(135, 236);
+            this.billprice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.billprice.Name = "billprice";
+            this.billprice.Size = new System.Drawing.Size(227, 26);
+            this.billprice.TabIndex = 18;
             // 
             // billprod
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(118, 164);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 26);
-            this.textBox2.TabIndex = 17;
+            this.billprod.BackColor = System.Drawing.Color.White;
+            this.billprod.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billprod.Location = new System.Drawing.Point(135, 179);
+            this.billprod.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.billprod.Name = "billprod";
+            this.billprod.Size = new System.Drawing.Size(227, 26);
+            this.billprod.TabIndex = 17;
             // 
             // billid
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(118, 116);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 26);
-            this.textBox1.TabIndex = 16;
+            this.billid.BackColor = System.Drawing.Color.White;
+            this.billid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billid.Location = new System.Drawing.Point(135, 115);
+            this.billid.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.billid.Name = "billid";
+            this.billid.Size = new System.Drawing.Size(227, 26);
+            this.billid.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(13, 190);
+            this.label4.Location = new System.Drawing.Point(40, 300);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 19);
+            this.label4.Size = new System.Drawing.Size(47, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "QTY";
             // 
@@ -277,9 +280,9 @@ namespace pos_wpf
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(13, 155);
+            this.label3.Location = new System.Drawing.Point(40, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 19);
+            this.label3.Size = new System.Drawing.Size(65, 23);
             this.label3.TabIndex = 13;
             this.label3.Text = "PRICE";
             // 
@@ -288,9 +291,9 @@ namespace pos_wpf
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(13, 123);
+            this.label2.Location = new System.Drawing.Point(31, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 19);
+            this.label2.Size = new System.Drawing.Size(97, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "PR NAME";
             // 
@@ -299,9 +302,9 @@ namespace pos_wpf
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(13, 86);
+            this.label1.Location = new System.Drawing.Point(40, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 19);
+            this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "BILL ID";
             // 
@@ -310,9 +313,9 @@ namespace pos_wpf
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(324, 16);
+            this.label6.Location = new System.Drawing.Point(370, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.Size = new System.Drawing.Size(97, 32);
             this.label6.TabIndex = 10;
             this.label6.Text = "Selling";
             // 
@@ -323,12 +326,14 @@ namespace pos_wpf
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Maroon;
-            this.button4.Location = new System.Drawing.Point(12, 417);
+            this.button4.Location = new System.Drawing.Point(14, 556);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 33);
+            this.button4.Size = new System.Drawing.Size(96, 44);
             this.button4.TabIndex = 9;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -337,12 +342,14 @@ namespace pos_wpf
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Maroon;
-            this.button3.Location = new System.Drawing.Point(12, 153);
+            this.button3.Location = new System.Drawing.Point(14, 204);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 33);
+            this.button3.Size = new System.Drawing.Size(96, 44);
             this.button3.TabIndex = 8;
             this.button3.Text = "Products";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -350,12 +357,14 @@ namespace pos_wpf
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(12, 90);
+            this.button2.Location = new System.Drawing.Point(14, 120);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 34);
+            this.button2.Size = new System.Drawing.Size(110, 45);
             this.button2.TabIndex = 7;
             this.button2.Text = "Category";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -363,12 +372,14 @@ namespace pos_wpf
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(12, 28);
+            this.button1.Location = new System.Drawing.Point(14, 37);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 35);
+            this.button1.Size = new System.Drawing.Size(96, 47);
             this.button1.TabIndex = 6;
             this.button1.Text = "Sellers";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button10
             // 
@@ -376,40 +387,43 @@ namespace pos_wpf
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button10.ForeColor = System.Drawing.Color.Maroon;
-            this.button10.Location = new System.Drawing.Point(12, 216);
+            this.button10.Location = new System.Drawing.Point(14, 288);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(96, 55);
+            this.button10.Size = new System.Drawing.Size(110, 73);
             this.button10.TabIndex = 10;
             this.button10.Text = "Payment Method";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button11
+            // button9
             // 
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.Maroon;
-            this.button11.Location = new System.Drawing.Point(12, 291);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(96, 34);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Report";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.ForeColor = System.Drawing.Color.Maroon;
+            this.button9.Location = new System.Drawing.Point(14, 388);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(110, 45);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Report";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Selling
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 537);
-            this.Controls.Add(this.button11);
+            this.ClientSize = new System.Drawing.Size(1236, 949);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Selling";
             this.Text = "Selling";
             this.Load += new System.EventHandler(this.Selling_Load);
@@ -449,5 +463,6 @@ namespace pos_wpf
         private System.Windows.Forms.DataGridView billdgv;
         private System.Windows.Forms.ComboBox selpay;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
     }
 }

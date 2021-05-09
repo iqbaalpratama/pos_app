@@ -42,8 +42,8 @@ namespace pos_wpf
             DataTable dt = new DataTable();
             dt.Columns.Add("CatName", typeof(string));
             dt.Load(rdr);
-            selcat.ValueMember = "catName";
-            selcat.DataSource = dt;
+            selprodcat.ValueMember = "catName";
+            selprodcat.DataSource = dt;
             Con.Close();
         }
 
@@ -125,13 +125,21 @@ namespace pos_wpf
             populateprod("");
             populatebill();
 
+            if (this.user != "Admin")
+            {
+                button1.Hide();
+                button2.Hide();
+                button3.Hide();
+                button9.Hide();
+                button10.Hide();
+            }
         }
 
         
 
         private void button5_Click(object sender, EventArgs e)
         {
-            populateprod(selcat.Text);
+            populateprod(selprodcat.Text);
         }
 
         int GrandTotal = 0, n = 0;
@@ -198,6 +206,40 @@ namespace pos_wpf
             }
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Report rep =  new Report();
+            rep.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sellers sel = new Sellers();
+            sel.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Category cat = new Category();
+            cat.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Product prod = new Product();
+            prod.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            log.Show();
+            this.Hide();
+        }
 
         private void button7_Click(object sender, EventArgs e)
         {

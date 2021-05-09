@@ -18,7 +18,9 @@ namespace pos_wpf
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Selling sell = new Selling();
+            sell.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,7 +37,9 @@ namespace pos_wpf
             this.Hide();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\pos.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\pos.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Salim\Documents\posdb.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void populate()
         {
             Con.Open();
@@ -128,6 +132,20 @@ namespace pos_wpf
         {
             Report report = new Report();
             report.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PaymentMethod pm = new PaymentMethod();
+            pm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            log.Show();
             this.Hide();
         }
     }
