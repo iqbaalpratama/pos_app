@@ -60,7 +60,7 @@ namespace pos_wpf
             try
             {
                 Con.Open();
-                string query = "insert into Prod values(" + prodid.Text + ",'" + prodname.Text + "'," + prodqty.Text + ",'"+ prodcat.Text + "',"+int.Parse(prodout.Text)/int.Parse(prodqty.Text)+ ","+ prodprice.Text+")";
+                string query = "insert into Prod values(" + prodid.Text + ",'" + prodname.Text + "'," + prodqty.Text + ",'"+ prodcat.Text + "',"+int.Parse(prodout.Text)/int.Parse(prodqty.Text)+ ","+ prodprice.Text+",0)";
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product Added Successfully");

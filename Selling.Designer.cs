@@ -29,24 +29,22 @@ namespace pos_wpf
         /// </summary>
         private void InitializeComponent()
         {
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.selpay = new System.Windows.Forms.ComboBox();
+            this.amountidr = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.selproddgv = new System.Windows.Forms.DataGridView();
+            this.billdgv = new System.Windows.Forms.DataGridView();
+            this.orderdgv = new System.Windows.Forms.DataGridView();
+            this.selcat = new System.Windows.Forms.ComboBox();
+            this.billqty = new System.Windows.Forms.TextBox();
+            this.billprice = new System.Windows.Forms.TextBox();
+            this.billprod = new System.Windows.Forms.TextBox();
+            this.billid = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,32 +56,10 @@ namespace pos_wpf
             this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selproddgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billdgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderdgv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(546, 613);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(86, 31);
-            this.button9.TabIndex = 27;
-            this.button9.Text = "PRINT";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(653, 613);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(86, 31);
-            this.button8.TabIndex = 26;
-            this.button8.Text = "DELETE";
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -95,17 +71,19 @@ namespace pos_wpf
             this.button7.TabIndex = 25;
             this.button7.Text = "ADD PRODUCT";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(467, 613);
+            this.button6.Location = new System.Drawing.Point(551, 623);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(53, 31);
+            this.button6.Size = new System.Drawing.Size(79, 31);
             this.button6.TabIndex = 24;
             this.button6.Text = "ADD";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -117,27 +95,26 @@ namespace pos_wpf
             this.button5.TabIndex = 23;
             this.button5.Text = "Refresh";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.selpay);
+            this.panel1.Controls.Add(this.amountidr);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.selproddgv);
+            this.panel1.Controls.Add(this.billdgv);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.orderdgv);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.selcat);
+            this.panel1.Controls.Add(this.billqty);
+            this.panel1.Controls.Add(this.billprice);
+            this.panel1.Controls.Add(this.billprod);
+            this.panel1.Controls.Add(this.billid);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -149,30 +126,30 @@ namespace pos_wpf
             this.panel1.Size = new System.Drawing.Size(839, 684);
             this.panel1.TabIndex = 5;
             // 
-            // comboBox1
+            // selpay
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.selpay.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.selpay.FormattingEnabled = true;
+            this.selpay.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.comboBox1.Location = new System.Drawing.Point(622, 296);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 26);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.Text = "SELECT PAYMENT METHOD";
+            this.selpay.Location = new System.Drawing.Point(622, 296);
+            this.selpay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.selpay.Name = "selpay";
+            this.selpay.Size = new System.Drawing.Size(202, 26);
+            this.selpay.TabIndex = 33;
+            this.selpay.Text = "SELECT PAYMENT METHOD";
             // 
-            // label8
+            // amountidr
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(427, 296);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 23);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "IDR";
+            this.amountidr.AutoSize = true;
+            this.amountidr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.amountidr.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.amountidr.Location = new System.Drawing.Point(427, 296);
+            this.amountidr.Name = "amountidr";
+            this.amountidr.Size = new System.Drawing.Size(42, 23);
+            this.amountidr.TabIndex = 32;
+            this.amountidr.Text = "IDR";
             // 
             // label7
             // 
@@ -196,95 +173,95 @@ namespace pos_wpf
             this.label5.TabIndex = 30;
             this.label5.Text = "Sells List";
             // 
-            // dataGridView3
+            // selproddgv
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(27, 425);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(315, 229);
-            this.dataGridView3.TabIndex = 29;
+            this.selproddgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.selproddgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.selproddgv.Location = new System.Drawing.Point(27, 425);
+            this.selproddgv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.selproddgv.Name = "selproddgv";
+            this.selproddgv.RowHeadersWidth = 51;
+            this.selproddgv.RowTemplate.Height = 25;
+            this.selproddgv.Size = new System.Drawing.Size(315, 229);
+            this.selproddgv.TabIndex = 29;
             // 
-            // dataGridView2
+            // billdgv
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(383, 387);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(426, 199);
-            this.dataGridView2.TabIndex = 28;
+            this.billdgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.billdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.billdgv.Location = new System.Drawing.Point(383, 387);
+            this.billdgv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.billdgv.Name = "billdgv";
+            this.billdgv.RowHeadersWidth = 51;
+            this.billdgv.RowTemplate.Height = 25;
+            this.billdgv.Size = new System.Drawing.Size(426, 199);
+            this.billdgv.TabIndex = 28;
             // 
-            // dataGridView1
+            // orderdgv
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(383, 100);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(426, 179);
-            this.dataGridView1.TabIndex = 5;
+            this.orderdgv.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.orderdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderdgv.Location = new System.Drawing.Point(383, 100);
+            this.orderdgv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.orderdgv.Name = "orderdgv";
+            this.orderdgv.RowHeadersWidth = 51;
+            this.orderdgv.RowTemplate.Height = 25;
+            this.orderdgv.Size = new System.Drawing.Size(426, 179);
+            this.orderdgv.TabIndex = 5;
             // 
-            // comboBox2
+            // selcat
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.selcat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.selcat.FormattingEnabled = true;
+            this.selcat.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.comboBox2.Location = new System.Drawing.Point(51, 385);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(149, 26);
-            this.comboBox2.TabIndex = 22;
-            this.comboBox2.Text = "SELECT CATEGORY";
+            this.selcat.Location = new System.Drawing.Point(51, 385);
+            this.selcat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.selcat.Name = "selcat";
+            this.selcat.Size = new System.Drawing.Size(149, 26);
+            this.selcat.TabIndex = 22;
+            this.selcat.Text = "SELECT CATEGORY";
             // 
-            // textBox4
+            // billqty
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(118, 253);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 26);
-            this.textBox4.TabIndex = 19;
+            this.billqty.BackColor = System.Drawing.Color.White;
+            this.billqty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billqty.Location = new System.Drawing.Point(118, 253);
+            this.billqty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.billqty.Name = "billqty";
+            this.billqty.Size = new System.Drawing.Size(199, 26);
+            this.billqty.TabIndex = 19;
             // 
-            // textBox3
+            // billprice
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(118, 207);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 26);
-            this.textBox3.TabIndex = 18;
+            this.billprice.BackColor = System.Drawing.Color.White;
+            this.billprice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billprice.Location = new System.Drawing.Point(118, 207);
+            this.billprice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.billprice.Name = "billprice";
+            this.billprice.Size = new System.Drawing.Size(199, 26);
+            this.billprice.TabIndex = 18;
             // 
-            // textBox2
+            // billprod
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(118, 164);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 26);
-            this.textBox2.TabIndex = 17;
+            this.billprod.BackColor = System.Drawing.Color.White;
+            this.billprod.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billprod.Location = new System.Drawing.Point(118, 164);
+            this.billprod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.billprod.Name = "billprod";
+            this.billprod.Size = new System.Drawing.Size(199, 26);
+            this.billprod.TabIndex = 17;
             // 
-            // textBox1
+            // billid
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(118, 116);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 26);
-            this.textBox1.TabIndex = 16;
+            this.billid.BackColor = System.Drawing.Color.White;
+            this.billid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.billid.Location = new System.Drawing.Point(118, 116);
+            this.billid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.billid.Name = "billid";
+            this.billid.Size = new System.Drawing.Size(199, 26);
+            this.billid.TabIndex = 16;
             // 
             // label4
             // 
@@ -428,28 +405,27 @@ namespace pos_wpf
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Selling";
             this.Text = "Selling";
+            this.Load += new System.EventHandler(this.Selling_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selproddgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billdgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderdgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView orderdgv;
+        private System.Windows.Forms.ComboBox selprodcat;
+        private System.Windows.Forms.TextBox billqty;
+        private System.Windows.Forms.TextBox billprice;
+        private System.Windows.Forms.TextBox billprod;
+        private System.Windows.Forms.TextBox billid;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -459,12 +435,13 @@ namespace pos_wpf
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label amountidr;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView selproddgv;
+        private System.Windows.Forms.DataGridView billdgv;
+        private System.Windows.Forms.ComboBox selpay;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ComboBox selcat;
     }
 }
